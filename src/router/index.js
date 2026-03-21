@@ -17,6 +17,17 @@ const router = createRouter({
       // which is lazy-loaded when the route is visited.
       component: () => import('../views/AboutView.vue'),
     },
+    {
+      path: '/hello-world',
+      name: 'hello-world',
+      component: () => import('../views/HelloWorldView.vue'),
+    },
+    {
+      path: '/roadbook-tcr',
+      name: 'roadbook-tcr',
+      component: () => import('../views/RoadbookTCRView.vue'),
+      meta: { fullPage: true },
+    },
   ],
 })
 
