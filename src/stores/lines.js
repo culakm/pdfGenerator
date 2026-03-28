@@ -12,5 +12,9 @@ export const useLinesStore = defineStore('lines', () => {
     lines.value = newLines
   }
 
-  return { lines, addLine, setLines }
+  const $reset = () => {
+    lines.value = []
+  }
+
+  return { lines, addLine, setLines, $reset }
 })

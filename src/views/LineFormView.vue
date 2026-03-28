@@ -29,9 +29,9 @@
     <button @click="importFromJson">Import (replace)</button>
     <button @click="appendFromJson">Import (append)</button>
 
-    <h2>Lines ({{ store.lines.length }})</h2>
+    <h2>Lines ({{ lines.length }})</h2>
     <ul>
-      <li v-for="(line, i) in store.lines" :key="i">
+      <li v-for="(line, i) in lines" :key="i">
         #{{ line.order }} — {{ line.lat }}, {{ line.lng }} — {{ line.note }}
       </li>
     </ul>
@@ -39,45 +39,36 @@
 </template>
 
 <script setup>
-import { reactive, ref } from 'vue'
-import { useLinesStore } from '../stores/lines'
+import { ref } from 'vue'
+import { storeToRefs } from 'pinia'
+import { useLinesStore } from '@/stores/lines'
 
 const store = useLinesStore()
+const { lines } = storeToRefs(store)
+const { addLine, setLines } = store
 const importJson = ref('')
 
+const defaultForm = () => ({ order: null, lat: '', lng: '', note: '' })
+const form = ref(defaultForm())
+
 const exportToClipboard = () => {
-  navigator.clipboard.writeText(JSON.stringify(store.lines, null, 2))
+  navigator.clipboard.writeText(JSON.stringify(lines.value, null, 2))
 }
 
 const importFromJson = () => {
   const parsed = JSON.parse(importJson.value)
-  store.setLines(parsed)
+  setLines(parsed)
   importJson.value = ''
 }
 
 const appendFromJson = () => {
   const parsed = JSON.parse(importJson.value)
-  parsed.forEach((line) => store.addLine(line))
+  parsed.forEach((line) => addLine(line))
   importJson.value = ''
 }
 
-const form = reactive({
-  order: null,
-  lat: '',
-  lng: '',
-  note: '',
-})
-
 const onSubmit = () => {
-  store.addLine({
-    order: Number(form.order),
-    lat: form.lat,
-    lng: form.lng,
-    note: form.note,
-  })
-  form.order = null
-  form.lat = ''
-  form.lng = ''
-  form.note = ''
+  addLine({ ...form.value })
+  form.value = defaultForm()
 }
 </script>
