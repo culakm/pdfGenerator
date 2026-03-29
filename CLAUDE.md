@@ -33,6 +33,7 @@ No test runner or linter is configured.
 - **Pinia** — state management (setup store syntax)
 - **Vue Router** — client-side routing
 - **Quasar Framework** — UI components and styling
+- **pdfmake** — client-side PDF generation (declarative API, `dontBreakRows` for page-break control)
 - **Plain CSS / scoped styles** — for custom styling alongside Quasar
 
 ## Architecture

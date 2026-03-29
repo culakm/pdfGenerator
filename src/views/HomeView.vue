@@ -3,6 +3,7 @@
 		<h1>Home</h1>
 		<ul>
 			<li><RouterLink to="/line-form">Line form</RouterLink></li>
+			<li><RouterLink to="/lines-preview">Lines preview</RouterLink></li>
 		</ul>
 	</main>
 </template>

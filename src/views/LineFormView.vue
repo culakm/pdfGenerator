@@ -23,6 +23,9 @@
 								<q-input v-model="form.note" label="Note" filled dense />
 							</div>
 							<div class="col-auto">
+								<q-toggle v-model="form.checkField" label="Check" />
+							</div>
+							<div class="col-auto">
 								<q-btn type="submit" label="Add Line" color="primary" icon="add" />
 							</div>
 						</div>
@@ -41,6 +44,7 @@
 						<q-btn label="Import (replace)" color="warning" icon="upload" @click="importFromJson" />
 						<q-btn label="Import (append)" color="info" icon="playlist_add" @click="appendFromJson" />
 						<q-btn label="Import example" color="accent" icon="science" @click="importExample" />
+						<q-btn label="Lines preview" color="primary" icon="visibility" to="/lines-preview" />
 					</div>
 				</q-card-section>
 			</q-card>
@@ -79,7 +83,7 @@ const { lines } = storeToRefs(store);
 const { addLine, setLines } = store;
 const importJson = ref("");
 
-const defaultForm = () => ({ order: null, lat: "", lng: "", note: "" });
+const defaultForm = () => ({ order: null, lat: "", lng: "", note: "", checkField: true });
 const form = ref(defaultForm());
 
 const exportToClipboard = () => {

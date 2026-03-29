@@ -14,6 +14,11 @@ const router = createRouter({
       name: 'line-form',
       component: () => import('../views/LineFormView.vue'),
     },
+    {
+      path: '/lines-preview',
+      name: 'lines-preview',
+      component: () => import('../views/LinesPreviewView.vue'),
+    },
   ],
 })
 

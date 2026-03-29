@@ -1,32 +1,352 @@
 [
-  { "order": 1, "lat": "48.1486", "lng": "17.1077", "note": "Start" },
-  { "order": 2, "lat": "48.1500", "lng": "17.1120", "note": "Turn left at the junction" },
-  { "order": 3, "lat": "48.1523", "lng": "17.1155", "note": "Bridge" },
-  { "order": 4, "lat": "48.1541", "lng": "17.1198", "note": "Continue straight, ignore side road on the right" },
-  { "order": 5, "lat": "48.1560", "lng": "17.1230", "note": "Gas station on the left — last fuel stop before the mountain section" },
-  { "order": 6, "lat": "48.1589", "lng": "17.1267", "note": "Right" },
-  { "order": 7, "lat": "48.1612", "lng": "17.1301", "note": "Narrow path, watch for pedestrians" },
-  { "order": 8, "lat": "48.1634", "lng": "17.1340", "note": "Crossroads" },
-  { "order": 9, "lat": "48.1650", "lng": "17.1378", "note": "Follow the main road through the village, speed limit 30 km/h, school zone ahead" },
-  { "order": 10, "lat": "48.1672", "lng": "17.1410", "note": "Left at roundabout, second exit" },
-  { "order": 11, "lat": "48.1698", "lng": "17.1445", "note": "Uphill" },
-  { "order": 12, "lat": "48.1720", "lng": "17.1480", "note": "Sharp bend — caution in wet conditions, gravel on the road surface after rain" },
-  { "order": 13, "lat": "48.1745", "lng": "17.1512", "note": "Checkpoint A" },
-  { "order": 14, "lat": "48.1770", "lng": "17.1548", "note": "Straight" },
-  { "order": 15, "lat": "48.1793", "lng": "17.1580", "note": "River crossing — water level may vary, check depth before proceeding" },
-  { "order": 16, "lat": "48.1820", "lng": "17.1615", "note": "Fork, keep left" },
-  { "order": 17, "lat": "48.1845", "lng": "17.1650", "note": "Gravel road begins here, reduce speed, the section lasts approximately 2 km until the next paved road" },
-  { "order": 18, "lat": "48.1870", "lng": "17.1688", "note": "Gate" },
-  { "order": 19, "lat": "48.1895", "lng": "17.1720", "note": "Parking area on the right — good spot for a short break with a view of the valley" },
-  { "order": 20, "lat": "48.1920", "lng": "17.1755", "note": "Downhill section" },
-  { "order": 21, "lat": "48.1948", "lng": "17.1790", "note": "T-junction, turn right" },
-  { "order": 22, "lat": "48.1970", "lng": "17.1825", "note": "Pass under the railway bridge and immediately turn left onto the dirt track" },
-  { "order": 23, "lat": "48.1995", "lng": "17.1860", "note": "Forest" },
-  { "order": 24, "lat": "48.2020", "lng": "17.1898", "note": "Clearing with a memorial stone — stay on the marked trail, do not deviate" },
-  { "order": 25, "lat": "48.2048", "lng": "17.1930", "note": "Steep climb" },
-  { "order": 26, "lat": "48.2070", "lng": "17.1965", "note": "Summit viewpoint" },
-  { "order": 27, "lat": "48.2095", "lng": "17.2000", "note": "Begin descent, use low gear, the road is steep and winding for the next 3 km with limited visibility around corners" },
-  { "order": 28, "lat": "48.2120", "lng": "17.2035", "note": "Village entry" },
-  { "order": 29, "lat": "48.2145", "lng": "17.2070", "note": "Right at the church, then immediately left past the cemetery onto the main road heading south" },
-  { "order": 30, "lat": "48.2170", "lng": "17.2105", "note": "Finish" }
+	{
+		"order": 1,
+		"lat": "48.1486",
+		"lng": "17.1077",
+		"note": "Start",
+		"checkField": true
+	},
+	{
+		"order": 2,
+		"lat": "48.1500",
+		"lng": "17.1120",
+		"note": "Turn left at the junction",
+		"checkField": false
+	},
+	{
+		"order": 3,
+		"lat": "",
+		"lng": "",
+		"note": "Bridge over the Váh river — check for pedestrians and cyclists, narrow crossing with limited visibility on the far side due to a bend in the road. The bridge surface can be slippery when wet, especially in autumn when fallen leaves accumulate. Approach with caution and be prepared to stop if necessary.",
+		"checkField": false
+	},
+	{
+		"order": 4,
+		"lat": "48.1541",
+		"lng": "17.1198",
+		"note": "Continue straight, ignore side road on the right.                                                                                     TTThe road narrows slightly after the bend but widens again within 200 meters. Keep a steady speed and stay in your lane as oncoming traffic may appear without warning due to the curve blocking the view ahead of you.",
+		"checkField": false
+	},
+	{
+		"order": 5,
+		"lat": "48.1560",
+		"lng": "17.1230",
+		"note": "Gas station on the left — last fuel stop before the mountain section, check oil and tires",
+		"checkField": true
+	},
+	{
+		"order": 6,
+		"lat": "",
+		"lng": "",
+		"note": "Right",
+		"checkField": false
+	},
+	{
+		"order": 7,
+		"lat": "48.1612",
+		"lng": "17.1301",
+		"note": "Narrow path near Lúčky, watch for pedestrians",
+		"checkField": false
+	},
+	{
+		"order": 8,
+		"lat": "48.1634",
+		"lng": "17.1340",
+		"note": "Crossroads — proceed with caution. There is no signage at this intersection and visibility is poor from all directions. During morning hours local farm vehicles frequently cross here without stopping. Slow down to walking speed and check all four directions before you continue through. If in doubt wait for a clear view.",
+		"checkField": true
+	},
+	{
+		"order": 9,
+		"lat": "48.1650",
+		"lng": "17.1378",
+		"note": "Follow the main road through the village, speed limit 30 km/h, school zone ahead",
+		"checkField": false
+	},
+	{
+		"order": 10,
+		"lat": "48.1672",
+		"lng": "17.1410",
+		"note": "Left at roundabout, second exit toward Ďumbier",
+		"checkField": true
+	},
+	{
+		"order": 11,
+		"lat": "48.1698",
+		"lng": "17.1445",
+		"note": "Uphill",
+		"checkField": false
+	},
+	{
+		"order": 12,
+		"lat": "48.1720",
+		"lng": "17.1480",
+		"note": "Sharp bend — caution in wet conditions, gravel on the road surface after rain, reduce to 20 km/h",
+		"checkField": false
+	},
+	{
+		"order": 13,
+		"lat": "48.1745",
+		"lng": "17.1512",
+		"note": "Checkpoint A",
+		"checkField": false
+	},
+	{
+		"order": 14,
+		"lat": "",
+		"lng": "",
+		"note": "Straight",
+		"checkField": true
+	},
+	{
+		"order": 15,
+		"lat": "48.1793",
+		"lng": "17.1580",
+		"note": "River crossing — water level may vary depending on recent rainfall. Always check depth before proceeding by walking the crossing first if unsure. The riverbed has loose rocks that shift regularly so the safe line changes from week to week. In spring after snowmelt this crossing may be impassable entirely.",
+		"checkField": false
+	},
+	{
+		"order": 16,
+		"lat": "48.1820",
+		"lng": "17.1615",
+		"note": "Fork, keep left",
+		"checkField": false
+	},
+	{
+		"order": 17,
+		"lat": "48.1845",
+		"lng": "17.1650",
+		"note": "Gravel road begins here, reduce speed, the section lasts approximately 2 km until the next paved road — watch for larger stones",
+		"checkField": true
+	},
+	{
+		"order": 18,
+		"lat": "48.1870",
+		"lng": "17.1688",
+		"note": "Gate",
+		"checkField": false
+	},
+	{
+		"order": 19,
+		"lat": "48.1895",
+		"lng": "17.1720",
+		"note": "Parking area on the right — good spot for a short break with a view of the Nízke Tatry valley",
+		"checkField": true
+	},
+	{
+		"order": 20,
+		"lat": "48.1920",
+		"lng": "17.1755",
+		"note": "Downhill section",
+		"checkField": false
+	},
+	{
+		"order": 21,
+		"lat": "48.1948",
+		"lng": "17.1790",
+		"note": "T-junction, turn right",
+		"checkField": false
+	},
+	{
+		"order": 22,
+		"lat": "48.1970",
+		"lng": "17.1825",
+		"note": "Pass under the railway bridge and immediately turn left onto the dirt track. The entrance to the track is partially hidden by overgrown bushes on both sides. Look for two wooden posts marking the gap in the hedge approximately 30 meters after the bridge. If you reach the paved road going uphill you have gone too far and need to turn around.",
+		"checkField": true
+	},
+	{
+		"order": 23,
+		"lat": "",
+		"lng": "",
+		"note": "Forest",
+		"checkField": false
+	},
+	{
+		"order": 24,
+		"lat": "48.2020",
+		"lng": "17.1898",
+		"note": "Clearing with a memorial stone — stay on the marked trail, do not deviate, terrain is dangerous",
+		"checkField": false
+	},
+	{
+		"order": 25,
+		"lat": "48.2048",
+		"lng": "17.1930",
+		"note": "Steep climb",
+		"checkField": true
+	},
+	{
+		"order": 26,
+		"lat": "48.2070",
+		"lng": "17.1965",
+		"note": "Summit viewpoint — panoráma of the Tatra range visible on clear days",
+		"checkField": false
+	},
+	{
+		"order": 27,
+		"lat": "48.2095",
+		"lng": "17.2000",
+		"note": "Begin descent, use low gear, the road is steep and winding for the next 3 km with limited visibility around corners",
+		"checkField": false
+	},
+	{
+		"order": 28,
+		"lat": "48.2120",
+		"lng": "17.2035",
+		"note": "Village entry",
+		"checkField": true
+	},
+	{
+		"order": 29,
+		"lat": "48.2145",
+		"lng": "17.2070",
+		"note": "Right at the church, then immediately left past the cemetery onto the main road heading south. The turn is tight and there is a stone wall on the inside of the corner so take it slowly. Trucks and larger vehicles should swing wide using the full lane width. After the cemetery the road opens up and you can resume normal speed.",
+		"checkField": false
+	},
+	{
+		"order": 30,
+		"lat": "48.2170",
+		"lng": "17.2105",
+		"note": "Railway crossing — look both ways, no barriers",
+		"checkField": false
+	},
+	{
+		"order": 31,
+		"lat": "48.2195",
+		"lng": "17.2140",
+		"note": "Continue along the river for 500m",
+		"checkField": true
+	},
+	{
+		"order": 32,
+		"lat": "48.2218",
+		"lng": "17.2175",
+		"note": "Field road, possible mud after rain — 4x4 recommended or at least off-road tires",
+		"checkField": false
+	},
+	{
+		"order": 33,
+		"lat": "48.2240",
+		"lng": "17.2210",
+		"note": "Small wooden bridge",
+		"checkField": false
+	},
+	{
+		"order": 34,
+		"lat": "48.2265",
+		"lng": "17.2248",
+		"note": "Detour to lookout tower — short 200m side trip, view of Kriváň peak in good weather. The tower has recently been renovated and there are new information boards at the top describing the surrounding peaks and valleys. Worth the stop if you have ten minutes to spare and the sky is clear enough to see beyond the first ridge.",
+		"checkField": true
+	},
+	{
+		"order": 35,
+		"lat": "48.2288",
+		"lng": "17.2280",
+		"note": "Rejoin main trail",
+		"checkField": false
+	},
+	{
+		"order": 36,
+		"lat": "48.2310",
+		"lng": "17.2315",
+		"note": "Watch out, sheep herd often blocks the road in this section — be patient, do not honk",
+		"checkField": false
+	},
+	{
+		"order": 37,
+		"lat": "",
+		"lng": "",
+		"note": "Cattle grid",
+		"checkField": true
+	},
+	{
+		"order": 38,
+		"lat": "48.2358",
+		"lng": "17.2388",
+		"note": "Gravel ends, paved road resumes",
+		"checkField": false
+	},
+	{
+		"order": 39,
+		"lat": "48.2380",
+		"lng": "17.2420",
+		"note": "Intersection with highway — wait for gap, no traffic light, visibility limited from the left due to overgrown hedges. During peak hours between 7 and 9 AM and again between 4 and 6 PM this intersection can be very busy with commuter traffic and it may take several minutes to find a safe gap to merge.",
+		"checkField": false
+	},
+	{
+		"order": 40,
+		"lat": "48.2405",
+		"lng": "17.2455",
+		"note": "Gas station and refreshments near Ružomberok",
+		"checkField": true
+	},
+	{
+		"order": 41,
+		"lat": "48.2428",
+		"lng": "17.2490",
+		"note": "Left turn, follow signs to Lúčky",
+		"checkField": false
+	},
+	{
+		"order": 42,
+		"lat": "48.2450",
+		"lng": "17.2525",
+		"note": "Tunnel — turn on headlights, length 350m, one-way traffic controlled by semaphore",
+		"checkField": true
+	},
+	{
+		"order": 43,
+		"lat": "48.2475",
+		"lng": "17.2560",
+		"note": "Exit tunnel, sharp right",
+		"checkField": false
+	},
+	{
+		"order": 44,
+		"lat": "48.2498",
+		"lng": "17.2598",
+		"note": "Spa town — speed 30 km/h, heavy pedestrian and cyclist traffic, shared space zone with café terraces on both sides",
+		"checkField": false
+	},
+	{
+		"order": 45,
+		"lat": "48.2520",
+		"lng": "17.2630",
+		"note": "Roundabout, third exit",
+		"checkField": true
+	},
+	{
+		"order": 46,
+		"lat": "48.2545",
+		"lng": "17.2665",
+		"note": "12% incline — heavy vehicles use right lane. The gradient is sustained for approximately 1.5 km and there is no overtaking allowed on this stretch. Engine braking recommended on the way down. Several accidents have occurred here in winter when the road surface freezes overnight so check conditions before attempting this section between November and March.",
+		"checkField": false
+	},
+	{
+		"order": 47,
+		"lat": "48.2568",
+		"lng": "17.2700",
+		"note": "Scenic overlook on the right, optional photo stop with a view of the Nízke Tatry mountain range stretching across the horizon",
+		"checkField": false
+	},
+	{
+		"order": 48,
+		"lat": "",
+		"lng": "",
+		"note": "Descent into the valley",
+		"checkField": true
+	},
+	{
+		"order": 49,
+		"lat": "48.2615",
+		"lng": "17.2770",
+		"note": "Last curve before the finish — slow down, blind section with oncoming traffic possible. Pass under the railway bridge and immediately turn left onto the dirt track. The entrance to the track is partially hidden by overgrown bushes on both sides. Look for two wooden posts marking the gap in the hedge approximately 30 meters after the bridge. If you reach the paved road going uphill you have gone too far and need to turn around.",
+		"checkField": false
+	},
+	{
+		"order": 50,
+		"lat": "48.2640",
+		"lng": "17.2805",
+		"note": "Finish — parking at the Ďumbier mountain hotel",
+		"checkField": false
+	}
 ]
