@@ -23,18 +23,19 @@ export const usePdfExport = () => {
 								{ text: "X", style: "tableHeader" },
 							],
 							...lines.map((line) => {
+								const note = line.note.replace(/\s+/g, " ").trim();
 								const hasCoords = line.lat && line.lng;
 								const hasCheck = line.checkField;
 								if (hasCoords && hasCheck) {
-									return [{ text: String(line.order), alignment: "center" }, line.lat, line.lng, line.note, { text: "", alignment: "center" }];
+									return [{ text: String(line.order), alignment: "center" }, line.lat, line.lng, note, { text: "", alignment: "center" }];
 								}
 								if (hasCoords && !hasCheck) {
-									return [{ text: String(line.order), alignment: "center" }, line.lat, line.lng, { text: line.note, colSpan: 2 }, {}];
+									return [{ text: String(line.order), alignment: "center" }, line.lat, line.lng, { text: note, colSpan: 2 }, {}];
 								}
 								if (!hasCoords && hasCheck) {
-									return [{ text: String(line.order), alignment: "center" }, { text: line.note, colSpan: 3 }, {}, {}, { text: "", alignment: "center" }];
+									return [{ text: String(line.order), alignment: "center" }, { text: note, colSpan: 3 }, {}, {}, { text: "", alignment: "center" }];
 								}
-								return [{ text: String(line.order), alignment: "center" }, { text: line.note, colSpan: 4 }, {}, {}, {}];
+								return [{ text: String(line.order), alignment: "center" }, { text: note, colSpan: 4 }, {}, {}, {}];
 							}),
 						],
 					},

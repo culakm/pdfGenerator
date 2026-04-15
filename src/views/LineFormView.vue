@@ -2,6 +2,11 @@
 	<q-page class="q-pa-md">
 		<div class="q-gutter-y-md" style="max-width: 1200px; margin: 0 auto">
 			<q-card>
+				<q-card-section class="bg-primary text-white">
+					<div class="text-h4 text-weight-bold">hallo dilino</div>
+					<div class="text-subtitle2 text-white text-opacity-80">Manage and add your lines below</div>
+				</q-card-section>
+
 				<q-card-section>
 					<div class="text-h5">Add Line</div>
 				</q-card-section>
@@ -86,8 +91,28 @@ const importJson = ref("");
 const defaultForm = () => ({ order: null, lat: "", lng: "", note: "", checkField: true });
 const form = ref(defaultForm());
 
-const exportToClipboard = () => {
-	navigator.clipboard.writeText(JSON.stringify(lines.value, null, 2));
+const exportToClipboard = async () => {
+	const clipboardText = JSON.stringify(lines.value, null, 2);
+	const count = clipboardText.length;
+
+	if (!navigator.clipboard || typeof navigator.clipboard.writeText !== "function") {
+		alert("Clipboard copy is not available in this browser or context.");
+		console.error("Clipboard API is not available.");
+		return;
+	}
+
+	try {
+		await navigator.clipboard.writeText(clipboardText);
+		clipboardCharacterCount(count);
+	} catch (error) {
+		alert("Failed to copy to clipboard. Please check browser permissions and try again.");
+		console.error("Clipboard write failed:", error);
+	}
+};
+
+const clipboardCharacterCount = (count) => {
+	alert(`Copied ${count} characters to clipboard!`);
+	console.log(`ty dilino, copied ${count} znakov v clipboard`);
 };
 
 const importFromJson = () => {
