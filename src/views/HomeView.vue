@@ -4,6 +4,7 @@
 		<ul>
 			<li><RouterLink to="/line-form">Line form</RouterLink></li>
 			<li><RouterLink to="/lines-preview">Lines preview</RouterLink></li>
+			<li><RouterLink to="/metronome">Metronome</RouterLink></li>
 		</ul>
 	</main>
 </template>
