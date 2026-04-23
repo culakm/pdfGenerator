@@ -1,0 +1,8 @@
+dist
+node_modules
+package-lock.json
+.claude
+.github
+CLAUDE.md
+test_start1.md
+*.md

@@ -1,4 +1,4 @@
-import { ref, computed, onUnmounted } from "vue";
+import { computed, onUnmounted, ref } from 'vue';
 
 export const useMetronome = () => {
 	const bpm = ref(120);

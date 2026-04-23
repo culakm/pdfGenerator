@@ -1,0 +1,1 @@
+every string "Lines" change to uppercase
